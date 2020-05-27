@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
@@ -11,7 +14,7 @@ import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
-const Heading = tw(SectionHeading)``;
+const Heading = tw(SectionHeading)`text-orange-400`;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
 const Description = tw(SectionDescription)`text-center mx-auto`;
 const ThreeColumnContainer = styled.div`
@@ -22,11 +25,10 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 transform hover:scale-105 `}
   .imageContainer {
-    ${tw`text-center rounded-full p-4 bg-gray-100`}
-    img {
-      ${tw`w-8 h-8`}
+    p {
+      ${tw`text-xl text-teal-500 font-bold text-3xl`}
     }
   }
 
@@ -46,37 +48,33 @@ const Card = styled.a`
   }
 `;
 
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
-`;
+const PrimaryAction = tw.button`m-auto block rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-teal-500 text-gray-100 hocus:bg-teal-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
 export default ({
   cards = [
     {
-      imageSrc: ShieldIconImage,
+      imageSrc: "1",
       title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
-      url: "https://timerse.com"
+      description:
+        "We strictly only deal with vendors that provide top notch security.",
     },
     {
-      imageSrc: SupportIconImage,
+      imageSrc: "2",
       title: "24/7 Support",
       description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com"
     },
     {
-      imageSrc: CustomizeIconImage,
+      imageSrc: "3",
       title: "Customizable",
       description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com"
-    }
+    },
   ],
-  linkText = "Learn More",
-  heading = "",
+  linkText = "",
+  heading = "3 Easy Steps To Find A Tutor",
   subheading = "",
   description = "",
   imageContainerCss = null,
-  imageCss = null
+  imageCss = null,
 }) => {
   /*
    * This componets accepts a prop - `cards` which is an array of object denoting the cards. Each object in the cards array can have the following keys (Change it according to your need, you can also add more objects to have more cards in this feature component):
@@ -96,7 +94,7 @@ export default ({
             <Column key={i}>
               <Card href={card.url}>
                 <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="" css={imageCss} />
+                  <p>{card.imageSrc}</p>
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
@@ -110,8 +108,8 @@ export default ({
             </Column>
           ))}
         </ThreeColumnContainer>
+        <PrimaryAction>Contact Us</PrimaryAction>
       </ContentWithPaddingXl>
-      <DecoratorBlob />
     </Container>
   );
 };
