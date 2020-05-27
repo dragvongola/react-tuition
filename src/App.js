@@ -20,10 +20,10 @@ function App() {
       <HeaderBase />
       <AnimationRevealPage>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/FAQ" component={Faq} />
-          <Route path="/Contact" component={Forms} />
-          <Route path="/" component={Home} />
+          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+          <Route path={process.env.PUBLIC_URL + "/FAQ"} component={Faq} />
+          <Route path={process.env.PUBLIC_URL + "/Contact"} component={Forms} />
+          <Route path={process.env.PUBLIC_URL + "/"} component={Home} />
         </Switch>
         <Footer />
       </AnimationRevealPage>
