@@ -7,10 +7,10 @@ import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
-const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`;
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const Container = tw(ContainerBase)`bg-teal-500 text-gray-100 -mx-8 -mb-8`;
+const Content = tw.div`max-w-none mx-auto py-20 lg:py-24`;
 
-const Row = tw.div`flex items-center justify-center flex-col px-8`;
+const Row = tw.div`flex items-center justify-center flex-col`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
@@ -40,7 +40,6 @@ export default () => {
             <Link href="#">Home</Link>
             <Link href="#">About</Link>
             <Link href="#">Contact Us</Link>
-            <Link href="#">Blog</Link>
             <Link href="#">Reviews</Link>
           </LinksContainer>
           <SocialLinksContainer>

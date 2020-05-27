@@ -108,7 +108,9 @@ export default ({
             </Column>
           ))}
         </ThreeColumnContainer>
-        <PrimaryAction>Contact Us</PrimaryAction>
+        <a href="/Contact">
+          <PrimaryAction>Contact Us</PrimaryAction>
+        </a>
       </ContentWithPaddingXl>
     </Container>
   );

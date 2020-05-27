@@ -6,13 +6,13 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/MindFlex-Logo.jpg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
 const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl mx-auto
+  max-w-screen-xl mx-auto sticky
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -37,7 +37,7 @@ export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`w-32 mr-3`}
   }
 `;
 
@@ -80,8 +80,8 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/#">Home</NavLink>
       <NavLink href="/#">Tuition Rates</NavLink>
-      <NavLink href="/#">FAQ</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
+      <NavLink href="/FAQ">FAQ</NavLink>
+      <NavLink href="/Contact">Contact Us</NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
         REGISTER AS A TUTOR
       </PrimaryLink>
@@ -95,7 +95,7 @@ export default ({
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Treact
+      Mindflex
     </LogoLink>
   );
 

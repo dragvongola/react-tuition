@@ -16,12 +16,12 @@ import "slick-carousel/slick/slick.css";
 
 const PrimaryBackgroundContainer = tw(
   Container
-)`-mx-8 px-8 bg-orange-400 text-white`;
+)`-mx-8 px-8 bg-gray-900 text-white`;
 
 const HeadingContainer = tw.div``;
-const Subheading = tw(SubheadingBase)`text-center text-gray-100 mb-4`;
+const Subheading = tw(SubheadingBase)`text-center text-orange-500 mb-4`;
 const Heading = tw(SectionHeading)``;
-const Description = tw(SectionDescription)`mx-auto text-center text-white`;
+const Description = tw(SectionDescription)`mx-auto text-center text-orange-500`;
 
 const TestimonialsSlider = styled(Slider)`
   ${tw`flex mt-16 mx-auto max-w-xs sm:max-w-xl lg:max-w-4xl text-left bg-gray-100 rounded-lg text-gray-900`}

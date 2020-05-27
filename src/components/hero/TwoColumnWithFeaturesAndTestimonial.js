@@ -89,7 +89,6 @@ export default ({
   ];
   return (
     <>
-      <Header links={navLinks} />
       <Container>
         <ContentWithVerticalPadding>
           <Row>
