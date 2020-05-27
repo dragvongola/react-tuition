@@ -2,7 +2,6 @@
   "name": "tuition1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dragvongola.github.io/react-tuition",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
